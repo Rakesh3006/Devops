@@ -17,6 +17,4 @@ jobs:
   triage:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/labeler@v4
-      with:
         value1: ${{ inputs.set_values1 }}
