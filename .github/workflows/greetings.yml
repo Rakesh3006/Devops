@@ -5,4 +5,7 @@ on:
 
 jobs:
   workflow_call:
-    uses: ./.github/workflows/reusable_workflow.yml   
+    uses: ./.github/workflows/reusable_workflow.yml 
+    with:
+      set_values1: 1
+      set_values2: 2
