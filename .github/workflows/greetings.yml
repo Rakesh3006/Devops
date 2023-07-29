@@ -1,9 +1,7 @@
 name: Greetings
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
   greeting:
