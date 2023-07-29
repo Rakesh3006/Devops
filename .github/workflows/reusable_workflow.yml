@@ -9,12 +9,11 @@ on:
       set_values2:
         required: true
         type: string
-    secrets:
-      token:
-        required: true
-
+        
 jobs:
-  triage:
+  printInputs:
     runs-on: ubuntu-latest
     steps:
-        value1: ${{ inputs.set_values1 }}
+    - run: |
+        echo "Log level: ${{ github.event.inputs.set_values1 }}"
+        echo "Tags: ${{ github.event.inputs.set_values2}}" 
