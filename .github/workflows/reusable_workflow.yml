@@ -14,6 +14,7 @@ jobs:
   printInputs:
     runs-on: ubuntu-latest
     steps:
-    - run: |
-        echo "Log level: ${{ github.event.client_payload.set_values1 }}"
-        echo "Tags: ${{ github.event.client_payload.set_values2}}" 
+      - name: calling the input from caller workflow
+        run: | 
+          echo "Log level: ${{ inputs.set_values1 }}"
+          echo "Tags: ${{ inputs.set_values2}}" 
