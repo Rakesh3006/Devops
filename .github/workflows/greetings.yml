@@ -2,6 +2,13 @@ name: Greetings
 
 on:
   workflow_dispatch:
+    inputs:
+      test:
+        description: "test_annotation"
+        required: true
+      environment:
+        description: "enviroment"
+        required: true
 
 jobs:
   workflow_call:
