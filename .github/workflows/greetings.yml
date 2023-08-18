@@ -6,12 +6,12 @@ on:
       test:
         description: "select the runner"
         required: true
-        choice:
-          type: choice
-          options:
-          - foo
-          - bar
-          - baz
+          choice:
+            type: choice
+            options:
+            - foo
+            - bar
+            - baz
       environment:
         description: "enviroment"
         required: true
