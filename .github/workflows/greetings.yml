@@ -6,7 +6,12 @@ on:
       test:
         description: "select the runner"
         required: true
-        default: 'dev,staging,[uat],prod'
+        choice:
+          type: choice
+          options:
+          - foo
+          - bar
+          - baz
       environment:
         description: "enviroment"
         required: true
