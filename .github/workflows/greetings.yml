@@ -19,9 +19,8 @@ jobs:
     needs: Buildjob
     steps:
       - name: 3rd phase
-        shell: cmd
         run: |
-          bby.txt
+         echo "my line" > bby.txt
 
   artifact:
     runs-on: ubuntu-latest
