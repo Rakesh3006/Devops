@@ -19,6 +19,7 @@ jobs:
     needs: Buildjob
     steps:
       - name: 3rd phase
+        shell: cmd
         run: |
           bby.txt
 
