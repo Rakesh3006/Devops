@@ -12,7 +12,7 @@ jobs:
       
       - name: 2nd phase
         run: |
-          mkdir rakesh 
+          mkdir BB 
   
   Deployjob:
     runs-on: ubuntu-latest
@@ -20,7 +20,7 @@ jobs:
     steps:
       - name: 3rd phase
         run: |
-          cd rakesh
+          cd BB
           touch bby.txt
 
   artifact:
@@ -32,7 +32,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: BBY
-          path:  path/to/artifact/rakesh/bby.txt
+          path:  path/to/artifact/BB/bby.txt
       
       - name: upload artifact
         uses: actions/download-artifact@v4
