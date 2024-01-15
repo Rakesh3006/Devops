@@ -20,7 +20,7 @@ jobs:
     steps:
       - name: 3rd phase
         run: |
-          touch bby.txt
+          bby.txt
 
   artifact:
     runs-on: ubuntu-latest
