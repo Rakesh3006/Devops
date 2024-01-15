@@ -20,8 +20,30 @@ jobs:
     steps:
       - name: 3rd phase
         run: |
-          echo "file created"
+          cd rakesh
+          touch bby.txt
+
+  artifact:
+    runs-on: ubuntu-latest
+    needs: Deployjob
+
+    steps:
+      - name: upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: BBY
+          path:  path/to/artifact/rakesh/bby.txt
+      
+      - name: upload artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: BBY
         
+
+
+ 
+
+
 
 
 
