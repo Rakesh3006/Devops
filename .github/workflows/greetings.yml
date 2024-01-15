@@ -21,6 +21,7 @@ jobs:
       - name: 3rd phase
         run: |
          echo "my line" > bby.txt
+         cat bby.txt
 
   artifact:
     runs-on: ubuntu-latest
@@ -30,13 +31,13 @@ jobs:
       - name: upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: BBY
+          name: bby-file-text
           path: bby.txt
       
       - name: upload artifact
         uses: actions/download-artifact@v4
         with:
-          name: BBY
+          name: bby-file-text
         
 
 
