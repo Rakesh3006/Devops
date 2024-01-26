@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: bby-file-text
-          path: ./bby.txt
+          path: path/to/artifact/BB/bby.txt
       
       - name: Download artifact
         uses: actions/download-artifact@v4
