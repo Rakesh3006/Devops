@@ -4,33 +4,32 @@ on:
   push
 
 jobs:
-  Buildjob:
-    runs-on: ubuntu-latest
-    steps:
-      - name: 1st phase
-        uses: actions/checkout@v3
+  # Buildjob:
+    # runs-on: ubuntu-latest
+    # steps:
+    #   - name: 1st phase
+    #     uses: actions/checkout@v3
       
-      - name: 2nd phase
-        run: |
-          mkdir BB
-          echo "Love you BB....!" > BB/bby.txt
-          git config --global user.email "no-reply@github.com"
-          git config --global user.name "GitHub Actions"
-          git add BB/bby.txt
-          git commit -m "Create folder using GitHub Actions"
-          git push
+      # - name: 2nd phase
+      #   run: |
+      #     mkdir BB
+      #     echo "Love you BB....!" > BB/bby.txt
+      #     git config --global user.email "no-reply@github.com"
+      #     git config --global user.name "GitHub Actions"
+      #     git add BB/bby.txt
+      #     git commit -m "Create folder using GitHub Actions"
+      #     git push
   
-  Deployjob:
-    runs-on: ubuntu-latest
-    needs: Buildjob
-    steps:
-      - name: 3rd phase
-        run: |
-         echo BB/bby.txt
+  # Deployjob:
+  #   runs-on: ubuntu-latest
+  #   needs: Buildjob
+  #   steps:
+  #     - name: 3rd phase
+  #       run: |
+  #        echo BB/bby.txt
 
   artifact:
     runs-on: ubuntu-latest
-    needs: Deployjob
 
     steps:
       - name: upload artifact
@@ -39,7 +38,7 @@ jobs:
           name: bby-file-text
           path: BB/bby.txt
       
-      - name: upload artifact
+      - name: Download artifact
         uses: actions/download-artifact@v4
         with:
           name: bby-file-text
