@@ -12,7 +12,11 @@ jobs:
       
       - name: 2nd phase
         run: |
-          mkdir BB 
+          mkdir BB
+          echo "my line" > BB/bby.txt
+          git add BB/bby.txt
+          git commit -m "Create folder using GitHub Actions"
+          git push
   
   Deployjob:
     runs-on: ubuntu-latest
@@ -20,12 +24,7 @@ jobs:
     steps:
       - name: 3rd phase
         run: |
-         echo "my line" > bby.txt
-         cat bby.txt
-      
-      - name: File exits
-        run: |
-         grep 
+         cat BB/bby.txt 
 
   artifact:
     runs-on: ubuntu-latest
