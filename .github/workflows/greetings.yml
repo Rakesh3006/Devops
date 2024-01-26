@@ -22,6 +22,10 @@ jobs:
         run: |
          echo "my line" > bby.txt
          cat bby.txt
+      
+      - name: File exits
+        run: |
+         grep 
 
   artifact:
     runs-on: ubuntu-latest
