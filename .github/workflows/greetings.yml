@@ -18,9 +18,7 @@ jobs:
           git config --global user.name "GitHub Actions"
           git add BB/bby.txt
           git commit -m "Create folder using GitHub Actions"
-          git push https://github.com/${{ github.repository }}.git HEAD:main
-          with:
-            token: ${{ secrets.GITHUB_TOKEN }}
+          git push
   
   Deployjob:
     runs-on: ubuntu-latest
