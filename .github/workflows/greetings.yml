@@ -55,7 +55,8 @@ jobs:
     steps:
       - name: Reading the secret
         run:
-          echo "{{ secrets.RK }}"
+          echo {{ secrets.RK }}
+          echo "rakesh_{{ secrets.RK }}"
 
         
 
