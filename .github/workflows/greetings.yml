@@ -4,11 +4,11 @@ on:
   push
 
 jobs:
-  # Buildjob:
-    # runs-on: ubuntu-latest
-    # steps:
-    #   - name: 1st phase
-    #     uses: actions/checkout@v3
+   Buildjob:
+     runs-on: ubuntu-latest
+     steps:
+       - name: 1st phase
+         uses: actions/checkout@v3
       
       # - name: 2nd phase
       #   run: |
