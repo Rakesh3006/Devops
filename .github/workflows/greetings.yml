@@ -33,11 +33,15 @@ jobs:
     needs: Buildjob
 
     steps:
+      - name: preparing artifact
+        run:
+          echo "Love you..." >> AX.txt
+
       - name: upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: bby-file-text
-          path: BB\bby.txt
+          path: AX.txt
       
       - name: Download artifact
         uses: actions/download-artifact@v4
