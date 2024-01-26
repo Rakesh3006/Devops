@@ -13,7 +13,7 @@ jobs:
       - name: 2nd phase
         run: |
           mkdir BB
-          echo "my line" > BB/bby.txt
+          echo "Love you BB....!" > BB/bby.txt
           git config --global user.email "no-reply@github.com"
           git config --global user.name "GitHub Actions"
           git add BB/bby.txt
@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: bby-file-text
-          path: bby.txt
+          path: BB/bby.txt
       
       - name: upload artifact
         uses: actions/download-artifact@v4
