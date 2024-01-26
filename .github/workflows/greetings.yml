@@ -28,7 +28,7 @@ jobs:
     steps:
       - name: 3rd phase
         run: |
-         cat BB/bby.txt 
+         cat BB/bby.txt
 
   artifact:
     runs-on: ubuntu-latest
