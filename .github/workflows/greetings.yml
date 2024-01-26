@@ -28,25 +28,35 @@ jobs:
   #       run: |
   #        echo BB/bby.txt
 
-  Artifact:
+  # Artifact:
+  #   runs-on: ubuntu-latest
+  #   needs: Buildjob
+
+  #   steps:
+  #     - name: preparing artifact
+  #       run:
+  #         echo "Love you..." >> AX.txt
+
+  #     - name: upload artifact
+  #       uses: actions/upload-artifact@v4
+  #       with:
+  #         name: bby-file-text
+  #         path: AX.txt
+      
+  #     - name: Download artifact
+  #       uses: actions/download-artifact@v4
+  #       with:
+  #         name: bby-file-text
+  
+  Secrets:
     runs-on: ubuntu-latest
-    needs: Buildjob
+    # needs: Artifact
 
     steps:
-      - name: preparing artifact
+      - name: Reading the secret
         run:
-          echo "Love you..." >> AX.txt
+          echo "{{ secrets.RK }}"
 
-      - name: upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: bby-file-text
-          path: AX.txt
-      
-      - name: Download artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: bby-file-text
         
 
 
